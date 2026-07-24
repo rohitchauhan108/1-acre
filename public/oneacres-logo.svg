@@ -1,0 +1,42 @@
+<svg viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- House Roof in Red Gradient -->
+  <path d="M160 30 L310 140 L275 140 L160 55 L45 140 L10 140 Z" fill="url(#roofRedGradient)" />
+  
+  <!-- Solid Roof Edge Line -->
+  <path d="M160 30 L300 132 L285 142 L160 50 L35 142 L20 132 Z" fill="#b91c1c" />
+
+  <!-- House Body Shadow Fill under roof -->
+  <path d="M70 120 L250 120 L250 220 C 180 230, 110 220, 70 230 Z" fill="url(#houseBodyGradient)" />
+
+  <!-- 4-pane White Window inside Roof -->
+  <g transform="translate(134, 90)">
+    <rect x="0" y="0" width="22" height="22" rx="2" fill="#FFFFFF" />
+    <rect x="28" y="0" width="22" height="22" rx="2" fill="#FFFFFF" />
+    <rect x="0" y="28" width="22" height="22" rx="2" fill="#FFFFFF" />
+    <rect x="28" y="28" width="22" height="22" rx="2" fill="#FFFFFF" />
+  </g>
+
+  <!-- Sweeping Red Swoosh Curve -->
+  <path d="M70 230 C 130 150, 240 150, 460 155 C 470 155, 470 166, 450 166 C 240 166, 150 178, 75 242 Z" fill="url(#roofRedGradient)" />
+
+  <!-- Logo Text: OneAcres.com -->
+  <text x="135" y="235" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="52" fill="#000000" letter-spacing="-1">
+    One<tspan fill="#cc0000">Acres</tspan><tspan fill="#000000">.com</tspan>
+  </text>
+
+  <!-- Subtitle Tagline: — www.oneacres.com — -->
+  <text x="190" y="275" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="18" fill="#222222" letter-spacing="2">
+    — www.oneacres.com —
+  </text>
+
+  <defs>
+    <linearGradient id="roofRedGradient" x1="10" y1="30" x2="470" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#cc0000" />
+      <stop offset="1" stop-color="#990000" />
+    </linearGradient>
+    <linearGradient id="houseBodyGradient" x1="70" y1="120" x2="250" y2="230" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b91c1c" />
+      <stop offset="1" stop-color="#881337" />
+    </linearGradient>
+  </defs>
+</svg>

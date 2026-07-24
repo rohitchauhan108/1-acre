@@ -1,0 +1,57 @@
+# ==========================================
+# Dependencies
+# ==========================================
+/node_modules
+/.pnp
+.pnp.js
+.yarn/
+
+# ==========================================
+# Next.js Build Output & Local Cache
+# ==========================================
+/.next/
+/out/
+/build
+/dist
+
+# ==========================================
+# Environment & Local Secret Files
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# ==========================================
+# Logs & Testing Output
+# ==========================================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+coverage/
+
+# ==========================================
+# Vercel & Deployment Cache
+# ==========================================
+.vercel
+
+# ==========================================
+# OS & Editor Specific Files
+# ==========================================
+.DS_Store
+*.pem
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
