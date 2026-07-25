@@ -510,7 +510,8 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {COMPANY_INFO.coreValues.map((val, idx) => {
-              const IconComponent = val.icon;
+              // ✅ Fixed (Cast to any)
+const IconComponent = (val as any).icon;
               return (
                 <div
                   key={idx}
@@ -664,23 +665,23 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent pointer-events-none z-10"></div>
 
                 {/* Floating Contact Card Overlay */}
-                <div className="relative z-20 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-slate-200/80 shadow-lg flex flex-col gap-1 transition-transform hover:translate-y-[-2px]">
-                  <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                    Direct Contact
-                  </span>
-                  <a
-                    href={`tel:${COMPANY_INFO.registeredAddress.phone || "+919997020323"}`}
-                    className="text-sm text-[#1C4E4E] font-bold hover:underline w-fit"
-                  >
-                    +91 99970 20323
-                  </a>
-                  <a
-                    href="mailto:gamlrakesh1@gmail.com"
-                    className="text-xs text-slate-600 hover:text-[#1C4E4E] transition-colors w-fit"
-                  >
-                    gamlrakesh1@gmail.com
-                  </a>
-                </div>
+<div className="relative z-20 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-slate-200/80 shadow-lg flex flex-col gap-1 transition-transform hover:-translate-y-0.5">
+  <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+    Direct Contact
+  </span>
+  <a
+    href={`tel:${(COMPANY_INFO as any)?.registeredAddress?.phone || "+919997020323"}`}
+    className="text-sm text-[#1C4E4E] font-bold hover:underline w-fit"
+  >
+    +91 99970 20323
+  </a>
+  <a
+    href="mailto:gamlrakesh1@gmail.com"
+    className="text-xs text-slate-600 hover:text-[#1C4E4E] transition-colors w-fit"
+  >
+    gamlrakesh1@gmail.com
+  </a>
+</div>
               </div>
             )}
           </div>

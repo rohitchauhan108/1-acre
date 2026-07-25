@@ -1,5 +1,7 @@
 // Centralized company information for One Acres Infra Heights India Private Limited
+import React from "react";
 import { ShieldCheck, BadgePercent, MapPin, Building2 } from "lucide-react";
+
 export interface Director {
   id: string;
   name: string;
@@ -39,6 +41,7 @@ export interface Stat {
 }
 
 export interface CoreValue {
+  icon: React.ElementType; // 👈 Fixed: Explicitly typed for Lucide Icons
   title: string;
   description: string;
 }
@@ -99,25 +102,25 @@ export const COMPANY_INFO = {
 
   coreValues: [
     {
-    icon: ShieldCheck,
-    title: "100% Legal & Clear Titles",
-    description: "Every acre, plot, and property is verified through thorough legal diligence with zero encumbrances and complete registry support."
-  },
-  {
-    icon: BadgePercent,
-    title: "Transparent Pricing",
-    description: "No hidden charges or unexpected escalation fees. Fair, competitive market rates backed by flexible payment plans."
-  },
-  {
-    icon: MapPin,
-    title: "Prime Dehradun Locations",
-    description: "Strategic developments near expressway corridors, Rajpur Road, Sahastradhara Road, and Doon Valley greenery."
-  },
-  {
-    icon: Building2,
-    title: "Infrastructure First",
-    description: "Equipped with wide metalled roads, underground drainage, electricity poles, boundary walls, and security gates before registry."
-  }
+      icon: ShieldCheck,
+      title: "100% Legal & Clear Titles",
+      description: "Every acre, plot, and property is verified through thorough legal diligence with zero encumbrances and complete registry support."
+    },
+    {
+      icon: BadgePercent,
+      title: "Transparent Pricing",
+      description: "No hidden charges or unexpected escalation fees. Fair, competitive market rates backed by flexible payment plans."
+    },
+    {
+      icon: MapPin,
+      title: "Prime Dehradun Locations",
+      description: "Strategic developments near expressway corridors, Rajpur Road, Sahastradhara Road, and Doon Valley greenery."
+    },
+    {
+      icon: Building2,
+      title: "Infrastructure First",
+      description: "Equipped with wide metalled roads, underground drainage, electricity poles, boundary walls, and security gates before registry."
+    }
   ] as CoreValue[]
 };
 
@@ -333,12 +336,6 @@ export const TESTIMONIALS = [
     quote: "As an NRI residing in Dubai, finding a trustworthy real estate developer in Dehradun was critical. Mrs. Meenakshi Sundriyal and the team handled every legal document with total transparency. Highly recommended!",
     name: "Sunita & Vikram Joshi",
     designation: "Villa Buyers, Himalayan Foothills Villas",
-    rating: 5
-  },
-  {
-    quote: "One Acres Infra Heights has been active in Dehradun since 2015. Their Race Course project is where my family lives today. Great roads, honest pricing, and genuine commitment.",
-    name: "Dr. Ananya Verma",
-    designation: "Homeowner, Race Course Residency",
     rating: 5
   },
   {
