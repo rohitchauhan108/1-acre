@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-// import Logo from './Logo';
 import Image from "next/image";
 import { COMPANY_INFO } from "../data/companyData";
 import {
@@ -31,10 +30,10 @@ export default function Header({ onOpenInquiry }: HeaderProps) {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Dehradun Spotlight", href: "/dehradun-spotlight" },
-    { label: "EMI Calculator", href: "/calculator" },
-    { label: "Gallery", href: "/gallery" },
+    { label: "Projects", href: "#" },
+    { label: "Dehradun Spotlight", href: "#" },
+    { label: "EMI Calculator", href: "#" },
+    { label: "Gallery", href: "#" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -80,44 +79,47 @@ export default function Header({ onOpenInquiry }: HeaderProps) {
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Brand Logo */}
-        <Link href="/">
-          <Image
-            src="/one-acres-logo.png"
-            alt="Company Logo"
-            width={150}
-            height={150}
-            className="h-14 w-auto"
-            priority
-          />
-        </Link>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+        {/* Left Group: Brand Logo & Desktop Menu with clear spacing */}
+        <div className="flex items-center gap-8 lg:gap-12">
+          {/* Brand Logo */}
+          <Link href="/">
+            <Image
+              src="/logo-copy.png"
+              alt="Company Logo"
+              width={150}
+              height={150}
+              className="h-14 w-auto"
+              priority
+            />
+          </Link>
 
-        {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
-          {navLinks.map((link) => {
-            const isActive = activeLink(link.href);
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`relative px-3 py-2 text-xs font-bold transition-colors ${
-                  isActive
-                    ? "text-red-600"
-                    : "text-slate-700 hover:text-red-600"
-                }`}
-              >
-                {link.label}
-                {isActive && (
-                  <motion.div
-                    layoutId="header-active-tab"
-                    className="absolute bottom-0 left-3 right-3 h-0.5 bg-red-600 rounded-full"
-                  />
-                )}
-              </Link>
-            );
-          })}
-        </nav>
+          {/* Desktop Menu */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+            {navLinks.map((link) => {
+              const isActive = activeLink(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-3 py-2 text-sm font-bold transition-colors ${
+                    isActive
+                      ? "text-red-600"
+                      : "text-slate-700 hover:text-red-600"
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <motion.div
+                      layoutId="header-active-tab"
+                      className="absolute bottom-0 left-3 right-3 h-0.5 bg-red-600 rounded-full"
+                    />
+                  )}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
 
         {/* Right CTA Actions */}
         <div className="hidden sm:flex items-center gap-3">

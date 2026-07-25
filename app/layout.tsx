@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     "One Acres Infra Heights India Private Limited | Residential Plots & Villas Dehradun",
   description:
     "Official website for One Acres Infra Heights India Private Limited (OneAcres.com).",
+    icons: {
+      icon: "/fav-copy.png"
+    }
 };
 
 export default function RootLayout({

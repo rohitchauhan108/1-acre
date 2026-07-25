@@ -1,5 +1,5 @@
 // Centralized company information for One Acres Infra Heights India Private Limited
-
+import { ShieldCheck, BadgePercent, MapPin, Building2 } from "lucide-react";
 export interface Director {
   id: string;
   name: string;
@@ -99,21 +99,25 @@ export const COMPANY_INFO = {
 
   coreValues: [
     {
-      title: "100% Legal & Clear Titles",
-      description: "Every acre, plot, and property is verified through thorough legal diligence with zero encumbrances and complete registry support."
-    },
-    {
-      title: "Transparent Pricing",
-      description: "No hidden charges or unexpected escalation fees. Fair, competitive market rates backed by flexible payment plans."
-    },
-    {
-      title: "Prime Dehradun Locations",
-      description: "Strategic developments near expressway corridors, Rajpur Road, Sahastradhara Road, and Doon Valley greenery."
-    },
-    {
-      title: "Infrastructure First",
-      description: "Equipped with wide metalled roads, underground drainage, electricity poles, boundary walls, and security gates before registry."
-    }
+    icon: ShieldCheck,
+    title: "100% Legal & Clear Titles",
+    description: "Every acre, plot, and property is verified through thorough legal diligence with zero encumbrances and complete registry support."
+  },
+  {
+    icon: BadgePercent,
+    title: "Transparent Pricing",
+    description: "No hidden charges or unexpected escalation fees. Fair, competitive market rates backed by flexible payment plans."
+  },
+  {
+    icon: MapPin,
+    title: "Prime Dehradun Locations",
+    description: "Strategic developments near expressway corridors, Rajpur Road, Sahastradhara Road, and Doon Valley greenery."
+  },
+  {
+    icon: Building2,
+    title: "Infrastructure First",
+    description: "Equipped with wide metalled roads, underground drainage, electricity poles, boundary walls, and security gates before registry."
+  }
   ] as CoreValue[]
 };
 
