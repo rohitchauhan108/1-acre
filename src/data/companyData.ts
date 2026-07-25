@@ -336,6 +336,12 @@ export const TESTIMONIALS = [
     name: "Dr. Ananya Verma",
     designation: "Homeowner, Race Course Residency",
     rating: 5
+  },
+  {
+    quote: "One Acres Infra Heights has been active in Dehradun since 2015. Their Race Course project is where my family lives today. Great roads, honest pricing, and genuine commitment.",
+    name: "Dr. Ananya Verma",
+    designation: "Homeowner, Race Course Residency",
+    rating: 5
   }
 ];
 
